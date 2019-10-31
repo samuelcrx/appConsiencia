@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
+
+.inner-scroll {
+  background: blanchedalmond;
+}
+
+.overscroll {
+  background: rgb(255, 255, 255);
+}
+
+//Ids
+#info {
+  padding-right: 5px;
+}
+
+//Classes
+.my-custom-menu {
+    --width: 500px;
+  }
+
+  .cards {
+    margin-top: 85px;
+  }
+
+  .ion-buttons {
+    font-family: 'Libre Baskerville', sans-serif;
+  }
+

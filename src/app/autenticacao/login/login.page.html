@@ -1,0 +1,55 @@
+<ion-content padding color="primary" class="conteudo">
+
+  <h1 text-center padding class="conteudo">
+    <!-- <ion-icon name="aperture" color="primary" class="logo"></ion-icon> -->
+    Consciência
+    <img src="../../../assets/fundo/fundo.jpg" alt="Logo" class="logo"/>
+  </h1>
+
+  <form [formGroup]="autenticacaoForm" (submit)="onSubmit('email')"> <!--[] = criador de propriedades, pertence ao angular-->
+
+    <ng-container *ngIf="!configs.ehLogin">
+      <ion-item>
+        <ion-icon name="person" slot="start" color="primary"></ion-icon>
+        <ion-input name="nome" formControlName="nome" placeholder="Nome"></ion-input>
+
+        <ion-note color="danger" slot="end" *ngIf="nome.dirty && nome.hasError('required')">Obrigatório!</ion-note>
+        <!--Acessa o get email do login.page.ts-->
+        <ion-note color="danger" slot="end" *ngIf="nome.dirty && nome.hasError('minlength')">Mínimo 3 digitos!
+        </ion-note>
+      </ion-item>
+    </ng-container>
+
+
+    <ion-item>
+      <ion-icon name="mail" slot="start" color="primary"></ion-icon>
+      <ion-input name="email" formControlName="email" placeholder="E-mail"></ion-input>
+
+      <ion-note color="danger" slot="end" *ngIf="email.dirty && email.hasError('required')">Obrigatório</ion-note>
+      <ion-note color="danger" slot="end" *ngIf="email.dirty && email.hasError('email')">e-mail invalido</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="key" slot="start" color="primary"></ion-icon>
+      <ion-input type="password" name="password" formControlName="password" placeholder="Senha"></ion-input>
+
+      <ion-note color="danger" slot="end" *ngIf="password.dirty && password.hasError('required')">Obrigatório</ion-note>
+      <ion-note color="danger" slot="end" *ngIf="password.dirty && password.hasError('minlength')">minimo 6 digitos
+      </ion-note>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="autenticacaoForm.invalid" color="primary" padding>
+      {{ configs.acaoPrimaria }}</ion-button>
+
+    <ion-button expand="block" fill="clear" color="primary" padding (click)="alternaTela()">
+      {{ configs.acaoSecundaria }}
+    </ion-button>
+
+    <ion-button expand="block" color="primary" padding (click)="onSubmit('facebook')">
+      <ion-icon name="logo-facebook" slot="start"></ion-icon>
+      Login com facebook
+    </ion-button>
+
+  </form>
+
+</ion-content>

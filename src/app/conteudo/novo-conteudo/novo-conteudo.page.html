@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar slot="secondary" color="primary" class="headerQ">
+    <ion-title color="light" class="ion-text-center">Questões</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" color="light" name="arrow-round-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="cardFundo">
+    <ion-card-header>
+      <ion-card-subtitle>Insira uma nova questão:</ion-card-subtitle>
+      <!-- <ion-card-title>Card Title</ion-card-title> -->
+    </ion-card-header>
+    <ion-card-content>
+      <!-- <ion-label position="stacked">Notes</ion-label> -->
+      <ion-textarea class="areaQuestao" placeholder="Digite aqui sua questão"></ion-textarea>
+
+      <h2 class="SubTitulos">Alternativas:</h2>
+
+      <ion-list class="bgColors">
+        <ion-item class="bgItemColors">
+          <ion-label>A-)</ion-label>
+          <ion-input placeholder="Resposta A"></ion-input>
+        </ion-item>
+        <ion-item class="bgItemColors">
+          <ion-label>B-)</ion-label>
+          <ion-input placeholder="Resposta B"></ion-input>
+        </ion-item>
+        <ion-item class="bgItemColors">
+          <ion-label>C-)</ion-label>
+          <ion-input placeholder="Resposta C"></ion-input>
+        </ion-item>
+        <ion-item class="bgItemColors">
+          <ion-label>D-)</ion-label>
+          <ion-input placeholder="Resposta D"></ion-input>
+        </ion-item>
+        <ion-item class="bgItemColors">
+          <ion-label>E-)</ion-label>
+          <ion-input placeholder="Resposta E"></ion-input>
+        </ion-item>
+
+
+      </ion-list>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

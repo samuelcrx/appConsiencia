@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+*{
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+ion-title {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+ion-input.sc-ion-input-md-h.sc-ion-input-md-s.md.hydrated::placeholder {
+  font-size: 35px;
+}
+
+.sc-ion-card-md-h {
+  background: #ececec8a;
+}
+
+.areaQuestao::placeholder {
+  font-size: 10px;
+}
+
+.areaQuestao {
+  font-family: "Libre Baskerville", sans-serif;
+  color: rgb(27, 27, 27);
+  background: rgb(226, 226, 226);
+  padding-left: 10px;
+  border: 2px solid rgba(112, 112, 112, 0.651);
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.bgColors {
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bgItemColors {
+  --background: var(--ion-item-background,var(--ion-background-color,rgb(233, 32, 32)207, 107, 107));
+}
+
+.SubTitulos {
+  margin-top: 10px;
+}

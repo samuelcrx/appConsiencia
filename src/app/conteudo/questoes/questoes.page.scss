@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: 'Poppins', sans-serif;
+  }
+
+ion-radio {
+  margin-right: 12px;
+}
+
+#cardCentro {
+  height: 100%;
+}
+
+#labelsFundo {
+  background-color: blue;
+  font-family:'Poppins', sans-serif;
+}
+
+.listaLabel {
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-card-content {
+  
+  background-color: transparent;
+}
+
+.btnVerificar {
+  --ion-color-primary: rgb(9, 163, 168);
+  --ion-color-primary-tint:  #11bb2d;
+  --border-radius: 0 6px;
+}
+.btnProximo {
+  --ion-color-primary: hsl(219, 82%, 29%);
+  --ion-color-primary-tint:rgb(8, 45, 168);
+  --border-radius: 0 6px;
+}
+
+.btnVerificar {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Libre Baskerville", sans-serif;
+  color: aliceblue;
+  padding: 0 3%;
+  width: 130px;
+  height: 35px;
+}
+
+#botoesVerificar {
+  padding-left: 5px;
+}
+#botoesVerificar2 {
+  padding-left: 5px;
+}
+
+#cartaoA {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+ion-toolbar {
+  --background: var(--ion-toolbar-background,var(--ion-background-color,#052b72));
+}
+
+#cardCentro {
+  align-items: center;
+  align-content: center;
+}
+
+#listaQuestoes {
+  background-color: transparent;
+}
+
+#subQuestoes {
+  color: #242323;
+  font-weight: bold;
+  font-family: "Libre Baskerville", sans-serif; // Fonte do aplicativo
+  font-size: 12px;
+  background-color: transparent;
+  border-bottom: transparent;
+}
+
+.checkbox {
+  margin-right: 8px;
+  background-color: transparent;
+}
+
+#listaQuestoes {
+  background-color: transparent;
+}
+
+ion-card {
+  background-color: #ececec8a;
+  margin-left: 0px;
+  width: 100%;
+  height: auto;
+}
+
+ion-title {
+  text-align: center;
+  font-family: "Libre Baskerville", sans-serif;
+}
+
+ion-card .question {
+  color: #292929;
+  font-family: 'Poppins', sans-serif;  // Fonte do aplicativo
+  font-size: auto;
+}
+
+ion-card .subQuestao {
+  color: transparent;
+  margin-top: 10px;
+  background-color: transparent;
+  font-family: "Libre Baskerville", sans-serif; // Fonte do aplicativo
+}
+
+.conteudo01 {
+  margin-top: 20px;
+}
+
+.alternativas {
+  background-color: transparent;
+}
+
+.list-md {
+  background: var(--ion-item-background, var(--ion-background-color, transparent));
+  font-family: "Libre Baskerville", sans-serif;
+}
+
+.espacoQuestoes {
+  --color-activated: transparent;
+  --color-focused: transparent;
+  --color-hover: transparent;
+}
+
+.lista {
+  color: transparent;
+  padding-top: 0px;
+  margin-bottom: 5px;
+  font-family: 'Poppins','Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: transparent;
+}
+
+.item .sc-ion-label-md-h,
+.item .sc-ion-label-md-h {
+  font-family: "Libre Baskerville", sans-serif;
+  color: #292929;
+  font-size: 12px;
+  padding-left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
+
+ion-content {
+  --ion-color-primary: hsl(0, 0%, 0%);
+}
+
+.conteudo {
+  padding-top: 2px;
+  font-family: "Acme", sans-serif !important;
+  font-size: 34px;
+}
+
+ion-button {
+  --ion-color-primary: hsl(185, 63%, 38%, 1);
+  --ion-default-font: "Libre Baskerville", sans-serif;
+}
+
+body {
+  background: var(--ion-background-color, #000);
+}

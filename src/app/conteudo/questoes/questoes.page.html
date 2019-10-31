@@ -1,0 +1,51 @@
+<ion-content>
+  <ion-header translucent>
+    <ion-toolbar slot="secondary" color="primary" class="headerQ">
+      <ion-title color="light">Questões</ion-title>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon slot="icon-only" color="light" name="arrow-round-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+
+      <ion-buttons slot="primary">
+        <ion-button>
+          <ion-icon slot="icon-only" color="light" name="refresh"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item id="cardCentro">
+    <ion-card id="cartaoA">
+      <ion-card-content class="question" text-center>
+        Qual o framework que será utilizado para o desenvolvimento
+        deste aplicativo?
+
+        <!-- Checkboxes in a List -->
+        <ion-list class="lista">
+          <ion-radio-group>
+            <ion-list-header class="listaLabel">
+              <ion-label class="listaLabel">Esolha 1 resposta:</ion-label>
+            </ion-list-header>
+
+            <ion-item *ngFor="let entry of form" class="espacoQuestoes" color="medium">
+              <ion-label color="dark">{{entry.val}}, {{entry.resultado}}</ion-label>
+              <ion-radio slot="start" color="dark" value={{entry.resultado}} (click)="dados(entry.resultado)" id="radioCheck"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+
+        <!-- Botões -->
+        <ion-button slot="icon-only" class="btnVerificar" id="btn01">
+          <ion-icon slot="end" name="checkmark" id="botoesVerificar2"></ion-icon>
+          Verificar
+        </ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-content padding>
+
+  <h1 text-center padding>
+    <ion-icon name="aperture" color="tertiary" class="logo"></ion-icon>
+  </h1>
+
+  <form [formGroup]="autenticacaoForm" (submit)="onSubmit()"> <!--[] = criador de propriedades, pertence ao angular-->
+
+    <ion-item>
+        <ion-icon name="person" color="tertiary" slot="start"></ion-icon>
+        <ion-input type="name" formControlName="nome" color="tertiary" placeholder="Nome"></ion-input>
+
+        <ion-note color="danger" slot="end" *ngIf="nome.dirty && nome.hasError('required')">Obrigatório</ion-note>
+        <ion-note color="danger" slot="end" *ngIf="nome.dirty && nome.hasError('minlength')">minimo 3 letras</ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-icon name="mail" color="tertiary" slot="start"></ion-icon>
+        <ion-input type="email" formControlName="email" color="tertiary" placeholder="Email"></ion-input>
+
+        <ion-note color="danger" slot="end" *ngIf="email.dirty && email.hasError('required')">Obrigatório</ion-note>
+        <ion-note color="danger" slot="end" *ngIf="email.dirty && email.hasError('email')">e-mail invalido</ion-note>
+    </ion-item>
+
+    <ion-item>
+        <ion-icon name="lock" color="tertiary" slot="start"></ion-icon>
+        <ion-input type="password" formControlName="password" color="tertiary" placeholder="Password"></ion-input>
+
+        <ion-note color="danger" slot="end" *ngIf="password.dirty && password.hasError('required')">Obrigatório</ion-note>
+      <ion-note color="danger" slot="end" *ngIf="password.dirty && password.hasError('minlength')">minimo 6 digitos</ion-note>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="autenticacaoForm.invalid" expand="block" color="tertiary" padding>Cadastrar</ion-button>
+    <ion-button expand="block" fill="clear" padding>Já possuo uma conta</ion-button>
+    <ion-button expand="block" color="tertiary" padding>
+        <ion-icon name="logo-facebook" slot="start"></ion-icon>
+        Login com Facebook
+      </ion-button>
+  </form>
+
+</ion-content>

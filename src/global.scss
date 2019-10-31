@@ -23,4 +23,34 @@
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/flex-utils.css"; 
+
+  :root {
+    --ion-color-primary: #23939d;
+    --ion-color-primary-rgb: 35,147,157;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #1f818a;
+    --ion-color-primary-tint: #399ea7;
+  }
+  
+  .ion-color-primary {
+    --ion-color-base: var(--ion-color-primary);
+    --ion-color-base-rgb: var(--ion-color-primary-rgb);
+    --ion-color-contrast: var(--ion-color-primary-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-primary-contrast-rgb);
+    --ion-color-shade: var(--ion-color-primary-shade);
+    --ion-color-tint: var(--ion-color-primary-tint);
+  }
+
+  *{
+    font-family: "Poppins", sans-serif;
+  }
+  
+.logo {
+    font-size: 6em;   
+}
+
+  .espacoQuestoes {
+      margin-top: 0px;
+  }
