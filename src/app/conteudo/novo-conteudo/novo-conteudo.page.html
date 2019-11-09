@@ -17,33 +17,43 @@
     </ion-card-header>
     <ion-card-content>
       <!-- <ion-label position="stacked">Notes</ion-label> -->
-      <ion-textarea class="areaQuestao" placeholder="Digite aqui sua questão"></ion-textarea>
+      <ion-textarea class="areaQuestao" placeholder="Digite aqui sua questão" [(ngModel)]="questao"></ion-textarea>
 
       <h2 class="SubTitulos">Alternativas:</h2>
 
       <ion-list class="bgColors">
         <ion-item class="bgItemColors">
           <ion-label>A-)</ion-label>
-          <ion-input placeholder="Resposta A"></ion-input>
+          <ion-input placeholder="Resposta A" [(ngModel)]="Alt01"></ion-input>
         </ion-item>
         <ion-item class="bgItemColors">
           <ion-label>B-)</ion-label>
-          <ion-input placeholder="Resposta B"></ion-input>
+          <ion-input placeholder="Resposta B" [(ngModel)]="Alt02"></ion-input>
         </ion-item>
         <ion-item class="bgItemColors">
           <ion-label>C-)</ion-label>
-          <ion-input placeholder="Resposta C"></ion-input>
+          <ion-input placeholder="Resposta C" [(ngModel)]="Alt03"></ion-input>
         </ion-item>
         <ion-item class="bgItemColors">
           <ion-label>D-)</ion-label>
-          <ion-input placeholder="Resposta D"></ion-input>
+          <ion-input placeholder="Resposta D" [(ngModel)]="Alt04"></ion-input>
         </ion-item>
         <ion-item class="bgItemColors">
           <ion-label>E-)</ion-label>
-          <ion-input placeholder="Resposta E"></ion-input>
+          <ion-input placeholder="Resposta E" [(ngModel)]="Alt05"></ion-input>
         </ion-item>
 
-
+        <ion-item>
+          <ion-label>Alternativa Correta:</ion-label>
+          <ion-select placeholder="Selecione" [(ngModel)]="AltCorreta">
+            <ion-select-option value="A">A</ion-select-option>
+            <ion-select-option value="B">B</ion-select-option>
+            <ion-select-option value="C">C</ion-select-option>
+            <ion-select-option value="D">D</ion-select-option>
+            <ion-select-option value="E">E</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-button expand="block" (click)="CreateRecord()" [disabled]="!questao || !Alt01 || !Alt02 || !Alt03 || !Alt04 || !Alt05 || !AltCorreta">Salvar</ion-button>
       </ion-list>
 
 

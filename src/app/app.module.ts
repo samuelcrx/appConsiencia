@@ -10,7 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire';
-
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 
@@ -18,6 +19,9 @@ import { environment } from 'src/environments/environment';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase), // método inicialize
     AngularFireAuthModule],
   providers: [
@@ -27,4 +31,5 @@ import { environment } from 'src/environments/environment';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
