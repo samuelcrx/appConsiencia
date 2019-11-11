@@ -20,8 +20,10 @@
   <ion-item id="cardCentro">
     <ion-card id="cartaoA">
       <ion-card-content class="question" text-center>
-        Qual o framework que será utilizado para o desenvolvimento
-        deste aplicativo?
+        <h3>
+          Questão teste ABCDE
+
+        </h3>
 
         <!-- Checkboxes in a List -->
         <ion-list class="lista">
@@ -31,8 +33,8 @@
             </ion-list-header>
 
             <ion-item *ngFor="let entry of form" class="espacoQuestoes" color="medium">
-              <ion-label color="dark">{{entry.val}}, {{entry.resultado}}</ion-label>
-              <ion-radio slot="start" color="dark" value={{entry.resultado}} (click)="dados(entry.resultado)" id="radioCheck"></ion-radio>
+              <ion-label color="dark">{{entry.val}}</ion-label>
+              <ion-radio slot="start" color="dark" value={{entry.resultado}} (click)="dados(entry.val)" id="radioCheck"></ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>
@@ -45,7 +47,7 @@
         
       </ion-card-content>
     </ion-card>
+    
+
   </ion-item>
-
-
 </ion-content>

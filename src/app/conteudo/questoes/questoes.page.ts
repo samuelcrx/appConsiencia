@@ -8,20 +8,14 @@ import { CrudQuestoesService } from 'src/app/core/services/crud-questoes.service
 })
 export class QuestoesPage implements OnInit {
 
-  public form = [
-    { val: 'Teste de mesa', resultado: "A" },
-    { val: 'Testa B', resultado: "B" },
-    { val: 'tESTE C', resultado: "C" },
-    { val: 'Teste D', resultado: "D" },
-    { val: 'Teste E', resultado: "E" }
-  ];
-
   public dados(dado): void {
 
     var teste = document.querySelector("ion-radio#btn01");
-    alert(dado);
+    alert(this.questoes.Alt01);
     console.log(teste);
   }
+
+
 
   questoes: any;
   questao: string;
@@ -33,15 +27,29 @@ export class QuestoesPage implements OnInit {
   AltCorreta: string;
 
   constructor(private crudQuestoesService: CrudQuestoesService) { }
+  
+  // public criandoQuestoes(): void {
+  //   console.log(this.questoes.Alt01)
+
+  // }
+  
+  public form = [
+    { val: "Teste", resultado: "A" },
+    { val: 'Testa B', resultado: "B" },
+    { val: 'Teste C', resultado: "C" },
+    { val: 'Teste D', resultado: "D" },
+    { val: 'Teste E', resultado: "E" }
+  ];
 
   ngOnInit() {
+
     this.crudQuestoesService.read_Questoes().subscribe(data => {
 
       this.questoes = data.map(e => {
         return {
           id: e.payload.doc.id,
           isEdit: false,
-          Questao: e.payload.doc.data()['questao'],
+          questao: e.payload.doc.data()['questao'],
           Alt01: e.payload.doc.data()['Alt01'],
           Alt02: e.payload.doc.data()['Alt02'],
           Alt03: e.payload.doc.data()['Alt03'],
@@ -50,12 +58,13 @@ export class QuestoesPage implements OnInit {
           AltCorreta: e.payload.doc.data()['AltCorreta'],
         };
       })
+      this.form.values[1] = 'Olá'
       console.log(this.questoes);
 
     });
   }
 
-  CreateRecord() {
+  consultarQuestoes() {
     let record = {};
     record['questao'] = this.questao;
     record['Alt01'] = this.Alt01;
@@ -64,19 +73,8 @@ export class QuestoesPage implements OnInit {
     record['Alt04'] = this.Alt04;
     record['Alt05'] = this.Alt05;
     record['AltCorreta'] = this.AltCorreta;
-    this.crudQuestoesService.create_NewQuestao(record).then(resp => {
-      this.questao = "";
-      this.Alt01 = "";
-      this.Alt02 = "";
-      this.Alt03 = "";
-      this.Alt04 = "";
-      this.Alt05 = "";
-      this.AltCorreta = "";
-      console.log(resp);
-    })
-      .catch(error => {
-        console.log(error);
-      });
+    this.crudQuestoesService.read_Questoes().forEach(toString)
   }
 
+  
 }
